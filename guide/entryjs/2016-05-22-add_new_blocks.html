@@ -378,7 +378,7 @@
 <li>block_calc.js : 계산 블록</li>
 <li>block_variable.js : 자료 블록</li>
 <li>block_func.js : 함수 생성 관련</li>
-<li>block_expansion_weather.js : 날씨 API 블록</li>
+<li>block<em>expansion</em>*.js : 확장블록 관련 블록</li>
 </ul>
 </li>
 </ul>
@@ -395,7 +395,8 @@
 <p> 그 예는 다음과 같습니다.  </p>
  <figure class="highlight"><table><tr><td class="code"><pre><span class="line">"sample_block": &#123;</span><br><span class="line">    "parent": "sample_mother_block",</span><br><span class="line">    "def": &#123;</span><br><span class="line">        "params": [</span><br><span class="line">            &#123;</span><br><span class="line">                type: 'number',</span><br><span class="line">                params: ['10'],</span><br><span class="line">            &#125;,</span><br><span class="line">            null,</span><br><span class="line">        ],</span><br><span class="line">        "type": "sample_block",</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>color</code> : 블록의 색상을 RGB 코드로 지정 합니다. 하드웨어 블록은 기본적으로 <code>#00979D</code> 색상 값을 사용합니다.  </p>
+<li><p><code>color</code> : 블록의 색상을 RGB 코드로 지정 합니다.<br>하드웨어 블록의 경우 아래와 같은 블록 색상으로 고정입니다.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  color: EntryStatic.colorSet.block.default.HARDWARE,</span><br><span class="line">  outerLine: EntryStatic.colorSet.block.darken.HARDWARE, </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>fontColor</code> : 블록의 글자 색상을 지정 합니다. 생략가능합니다.</p>
 </li>

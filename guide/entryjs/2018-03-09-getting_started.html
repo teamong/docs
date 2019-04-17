@@ -372,21 +372,21 @@
 <p>사이트 접속 후 우측 상단에 있는 Fork 버튼을 클릭합니다.<br><img src="../../images/entry-hw/fork.png" alt="Fork">  </p>
 <p>Fork를 통하여 본인 계정으로 해당 Repository를 복사합니다. 복사한 레포지토리를 git clone으로 내 로컬 컴퓨터에 다운 받아 개발 가능한 상태로 만듭니다.  </p>
 <h3 id="클론"><a href="#클론" class="headerlink" title="클론"></a>클론</h3><p>fork 를 통해 원격 저장소를 복사하였으면, 로컬로 저장소를 가져와야 합니다. <code>git clone</code>을 수행하여 로컬에 해당 소스를 받습니다.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/(본인의 Repository)/entryjs.git</span><br></pre></td></tr></table></figure></p>
-<h3 id="브랜치-변경"><a href="#브랜치-변경" class="headerlink" title="브랜치 변경"></a>브랜치 변경</h3><p>EntryJS 는 브랜치를 통해 작업내역을 관리중입니다.<br>자세한 설명은 <a href="https://git-scm.com/book/ko/v1/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F" target="_blank" rel="noopener">Git - 브랜치란 무엇인가?</a>를 참고하세요.<br>기본적으로 개발이 사용되는 브랜치는 develop 입니다.<br><strong>하드웨어 개발시</strong> 사용되는 브랜치는 develop-hw 입니다.</p>
+<h3 id="브랜치-변경"><a href="#브랜치-변경" class="headerlink" title="브랜치 변경"></a>브랜치 변경</h3><p>EntryJS 는 브랜치를 통해 작업내역을 관리중입니다.<br>자세한 설명은 <a href="https://git-scm.com/book/ko/v1/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F" target="_blank" rel="noopener">Git - 브랜치란 무엇인가?</a>를 참고하세요.<br>엔트리 팀 내부에서 개발 시 사용되는 브랜치는 develop 입니다.<br><strong>하드웨어 개발시</strong> 사용되는 브랜치는 <code>develop-hw</code> 입니다.</p>
 <blockquote>
 <p>이를 지키지 않으면 작업내역을 전부 고쳐야 하는 경우도 발생합니다. 작업 이전에 꼭 확인해야합니다.</p>
 </blockquote>
-<h3 id="의존성-모듈-설치"><a href="#의존성-모듈-설치" class="headerlink" title="의존성 모듈 설치"></a>의존성 모듈 설치</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br><span class="line">// 또는</span><br><span class="line">$ yarn</span><br></pre></td></tr></table></figure>
-<h3 id="실행"><a href="#실행" class="headerlink" title="실행"></a>실행</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run serve</span><br><span class="line">// 또는</span><br><span class="line">$ yarn serve</span><br></pre></td></tr></table></figure>
+<h3 id="의존성-모듈-설치"><a href="#의존성-모듈-설치" class="headerlink" title="의존성 모듈 설치"></a>의존성 모듈 설치</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<h3 id="테스트용-워크스페이스-페이지-로드"><a href="#테스트용-워크스페이스-페이지-로드" class="headerlink" title="테스트용 워크스페이스 페이지 로드"></a>테스트용 워크스페이스 페이지 로드</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run serve</span><br></pre></td></tr></table></figure>
 <h3 id="빌드"><a href="#빌드" class="headerlink" title="빌드"></a>빌드</h3><ol>
 <li><p>개발모드로 실행(파일을 수정하면 실시간으로 빌드 파일 생성됨)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run dev</span><br><span class="line">// 또는 </span><br><span class="line">$ yarn dev</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>단순 빌드파일 생성</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run dist</span><br><span class="line">// 또는 </span><br><span class="line">$ yarn dist</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run dist</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="하드웨어-블록-등록"><a href="#하드웨어-블록-등록" class="headerlink" title="하드웨어 블록 등록"></a>하드웨어 블록 등록</h2><p><code>block_(하드웨어명).js</code>파일을 추가하여 하드웨어 프로그램에 대응하는 블록 파일을 만들 수 있습니다.<br>일반적인 블록 또한 <code>block_(종류).js</code> 와 같은 이름을 가지고 있습니다. ex) <code>block_calc.js</code></p>
+<h2 id="하드웨어-블록-등록"><a href="#하드웨어-블록-등록" class="headerlink" title="하드웨어 블록 등록"></a>하드웨어 블록 등록</h2><p>하드웨어 블록에 관해서는 <a href="/docs/guide/entryjs/2016-07-08-add_new_blocks4.html">해당 페이지</a>를 참고해주세요.</p>
 
     
       <div class="guide-links">

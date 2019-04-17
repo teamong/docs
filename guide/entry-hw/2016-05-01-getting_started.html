@@ -383,10 +383,13 @@
 <p>Fork를 통하여 본인 계정으로 해당 Repository를 복사합니다. 복사한 레포지토리를 git clone으로 내 로컬 컴퓨터에 다운 받아 개발 가능한 상태로 만듭니다.</p>
 <h3 id="클론"><a href="#클론" class="headerlink" title="클론"></a>클론</h3><p>fork 를 통해 원격 저장소를 복사하였으면, 로컬로 저장소를 가져와야 합니다. <code>git clone</code>을 수행하여 로컬에 해당 소스를 받습니다.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/(본인의 Repository)/entry-hw.git</span><br></pre></td></tr></table></figure></p>
 <h4 id="Node-gyp-설치"><a href="#Node-gyp-설치" class="headerlink" title="Node-gyp 설치"></a>Node-gyp 설치</h4><p>엔트리 하드웨어는 시리얼포트 통신을 위해 <a href="https://github.com/node-serialport/node-serialport" target="_blank" rel="noopener">node-serialport</a> 라이브러리를 사용합니다.<br>해당 라이브러리를 사용하기 위해서는 C++, python 빌드 환경과 <a href="https://github.com/nodejs/node-gyp" target="_blank" rel="noopener">node-gyp</a> 라이브러리가 필요합니다.<br>빌드에 대한 자세한 사항은 <a href="https://github.com/nodejs/node-gyp#installation" target="_blank" rel="noopener">node-gyp#installation</a> 을 참고해 주세요.</p>
-<p>이 글에선 윈도우를 기준으로 설명하도록 하겠습니다.</p>
-<p>먼저 빌드 환경 구성을 위해 아래의 명령어로 파이썬, 윈도우 C++ 관련 툴을 설치해주세요. (관리자 모드 프롬프트에서 입력하세요)<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global --production windows-build-tools</span><br></pre></td></tr></table></figure></p>
-<p>그 다음 빌드 라이브러리인 node-gyp 을 설치해주세요.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global node-gyp</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">&gt; 만약 하드웨어 선택시 프로그램이 멈춘다면,</span><br><span class="line">&gt; `npx electron-build` 명령으로 재빌드 해보시길 바랍니다.</span><br><span class="line"></span><br><span class="line"><span class="comment">### 의존성 모듈 설치  </span></span><br><span class="line">``` bash</span><br><span class="line">$ npm install || yarn</span><br></pre></td></tr></table></figure></p>
-<h3 id="실행"><a href="#실행" class="headerlink" title="실행"></a>실행</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run start || yarn start</span><br></pre></td></tr></table></figure>
+<p>윈도우의 경우는 아래의 명령을 통해 파이썬, 윈도우 C++ 관련 툴을 설치해주세요. (관리자 모드 프롬프트에서 입력하세요)<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global --production windows-build-tools</span><br></pre></td></tr></table></figure></p>
+<p>그 다음 빌드 라이브러리인 node-gyp 을 설치해주세요.<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global node-gyp</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>만약 하드웨어 선택시 프로그램이 멈춘다면,<br><code>npx electron-build</code> 명령으로 재빌드 해보시길 바랍니다.</p>
+</blockquote>
+<h3 id="의존성-모듈-설치"><a href="#의존성-모듈-설치" class="headerlink" title="의존성 모듈 설치"></a>의존성 모듈 설치</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<h3 id="실행"><a href="#실행" class="headerlink" title="실행"></a>실행</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run start</span><br></pre></td></tr></table></figure>
 
     
       <div class="guide-links">
