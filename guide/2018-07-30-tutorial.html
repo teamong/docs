@@ -350,6 +350,14 @@
                     <a href="/docs/guide/etc/2016-07-07-faq.html" class="sidebar-link">FAQ</a>
                 </li>
             
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/etc/2019-12-11-updates.html" class="sidebar-link">문서 업데이트 내역</a>
+                </li>
+            
         
 </ul>
 
@@ -409,7 +417,7 @@
 
 <hr>
 <h4 id="Node-gyp-설치"><a href="#Node-gyp-설치" class="headerlink" title="Node-gyp 설치"></a>Node-gyp 설치</h4><p>엔트리 하드웨어는 시리얼포트 통신을 위해 <a href="https://github.com/node-serialport/node-serialport" target="_blank" rel="noopener">node-serialport</a> 라이브러리를 사용합니다.<br>해당 라이브러리를 사용하기 위해서는 C++, python 빌드 환경과 <a href="https://github.com/nodejs/node-gyp" target="_blank" rel="noopener">node-gyp</a> 라이브러리가 필요합니다.<br>빌드에 대한 자세한 사항은 <a href="https://github.com/nodejs/node-gyp#installation" target="_blank" rel="noopener">node-gyp#installation</a> 을 참고해 주세요.</p>
-<p>윈도우의 경우는 아래의 명령을 통해 파이썬, 윈도우 C++ 관련 툴을 설치해주세요. (관리자 모드 프롬프트에서 입력하세요)</p>
+<p><strong>윈도우의 경우</strong>는 아래의 명령을 통해 파이썬, 윈도우 C++ 관련 툴을 설치해주세요. (관리자 모드 프롬프트에서 입력하세요)</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global --production windows-build-tools</span><br></pre></td></tr></table></figure>
 
 <p>그 다음 빌드 라이브러리인 node-gyp 을 설치해주세요.</p>
@@ -431,17 +439,17 @@
 
 
 <hr>
-<h4 id="브랜치-변경"><a href="#브랜치-변경" class="headerlink" title="브랜치 변경"></a>브랜치 변경</h4><p>하드웨어 블록을 개발하는 경우 <strong>Entry Js에서 <code>develop-hw</code></strong>라는 브랜치를 사용해야 합니다.<br>develop-hw 브랜치는 하드웨어 관련 PR 이 모여서, 배포전에 develop 에 merge 되는 용도로 사용 중입니다.<br>(<strong>develop 브랜치는 엔트리 개발팀에서 이슈 처리를 하는 브랜치 입니다.</strong>) </p>
+<h4 id="브랜치-변경"><a href="#브랜치-변경" class="headerlink" title="브랜치 변경"></a>브랜치 변경</h4><p>하드웨어 블록을 개발하는 경우 <strong><code>develop-hw</code></strong>라는 브랜치를 사용해야 합니다.<br>develop-hw 브랜치는 하드웨어 관련 PR 이 모여서, 배포전에 develop 에 merge 되는 용도로 사용 중입니다.<br>(<strong>develop 브랜치는 엔트리 개발팀에서 이슈 처리를 하는 브랜치 입니다.</strong>) </p>
 <blockquote>
-<p>Git은 작업 내역을 분할/관리하기 위해 브랜치라는 개념을 사용합니다. 자세한 설명은 <a href="https://git-scm.com/book/ko/v1/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F" target="_blank" rel="noopener">Git - 브랜치란 무엇인가?</a>를 참고하세요.</p>
+<p>Git은 작업 내역을 분할/관리하기 위해 브랜치라는 개념을 사용합니다.<br>자세한 설명은 <a href="https://git-scm.com/book/ko/v1/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%3F" target="_blank" rel="noopener">Git - 브랜치란 무엇인가?</a>를 참고하세요.</p>
 </blockquote>
-<p>entryjs 디렉터리에서 다음 명령어를 실행하여 develop-hw 브랜치를 사용하게 설정합니다. Entry Hardware에는 해당하지 않습니다.</p>
+<p>각 프로젝트의 디렉토리에서 다음 명령어를 실행하여 develop-hw 브랜치를 사용하게 설정합니다.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout develop-hw</span><br></pre></td></tr></table></figure>
 
 <p>브랜치를 변경하면 다음과 같은 결과가 출력됩니다.</p>
 <p><img src="/docs/images/tutorial/tutorial15.png" alt="tutorial15"></p>
 <blockquote>
-<p>결론적으로는,<br>entryjs = develop-hw<br>entry-hw = master<br>브랜치에서 작업하시면 됩니다.</p>
+<p>결론적으로는,<br>entryjs, entry-hw 모두 develop-hw 브랜치에서 작업하시면 됩니다.</p>
 </blockquote>
 <hr>
 <h4 id="의존성-라이브러리-설치하기"><a href="#의존성-라이브러리-설치하기" class="headerlink" title="의존성 라이브러리 설치하기"></a>의존성 라이브러리 설치하기</h4><p>엔트리 프로젝트를 실행하려면 추가 라이브러리가 필요합니다. npm을 이용하여 필요한 라이브러리를 설치할 수 있습니다.</p>
@@ -453,7 +461,7 @@
 <blockquote>
 <p>entry-hw 디렉터리에서 다음 명령어를 실행합니다.</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line"><span class="comment"># entry-hw 의 시리얼포트 라이브러리의 정상동작을 위해 아래의 명령어를 추가로 입력합니다.</span></span><br><span class="line">npx electron-rebuild</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line"><span class="comment"># install 후 자동으로 실행되는 postinstall 스크립트에 아래 내용이 포함되어있으니 생략해도 됩니다.</span></span><br><span class="line">npx electron-rebuild -f</span><br></pre></td></tr></table></figure>
 
 <p>각 명령어를 실행하면 다음과 같은 화면이 출력됩니다.</p>
 <p><img src="/docs/images/tutorial/tutorial16.png" alt="tutorial16"></p>
@@ -484,7 +492,7 @@
 </blockquote>
 <hr>
 <h4 id="기본-명세"><a href="#기본-명세" class="headerlink" title="기본 명세"></a>기본 명세</h4><p>블록의 기본 명세를 작성하는 부분입니다.<br>id 프로퍼티의 경우, 엔트리에서 하드웨어 고유번호를 발급받아야 하지만 여기서는 테스트용으로 더미 ID 를 사용하였습니다.</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Entry.Testino = &#123;</span><br><span class="line">    id: <span class="string">'FF.FF'</span>,</span><br><span class="line">    name: <span class="string">'Testino'</span>,</span><br><span class="line">    url: <span class="string">'http://www.my-company.org/'</span>,</span><br><span class="line">    imageName: <span class="string">'testino.png'</span>, <span class="comment">//thumbnail. 신규등록시 images/hw, images/hardware 에 이미지가 있어야합니다.</span></span><br><span class="line">    title: &#123;</span><br><span class="line">        <span class="string">"ko"</span>: <span class="string">'테스트이노'</span>,</span><br><span class="line">        <span class="string">"en"</span>: <span class="string">'testino'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    setZero: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 엔트리 실행이 정지되었을 때 보낼 신호(reset 명령을 보냄)</span></span><br><span class="line">        <span class="comment">// 2번부터 13번 포트를 0으로 초기화</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">2</span> ; i &lt;= <span class="number">13</span> ; i++) &#123;</span><br><span class="line">            Entry.hw.sendQueue.PORT[i] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Entry.hw.update(); <span class="comment">// 하드웨어에 정보를 보냄</span></span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Entry.Testino = &#123;</span><br><span class="line">    id: <span class="string">'FF.FF'</span>,</span><br><span class="line">    name: <span class="string">'Testino'</span>,</span><br><span class="line">    url: <span class="string">'http://www.my-company.org/'</span>,</span><br><span class="line">    imageName: <span class="string">'testino.png'</span>, <span class="comment">//thumbnail. 신규등록시 images/hw, images/hardware 에 이미지가 있어야합니다.</span></span><br><span class="line">    title: &#123;</span><br><span class="line">        <span class="string">"ko"</span>: <span class="string">'테스트이노'</span>,</span><br><span class="line">        <span class="string">"en"</span>: <span class="string">'testino'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    setZero: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 엔트리 실행이 정지되었을 때 보낼 신호(reset 명령을 보냄)</span></span><br><span class="line">        <span class="comment">// 2번부터 13번 포트를 0으로 초기화</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">2</span> ; i &lt;= <span class="number">13</span> ; i++) &#123;</span><br><span class="line">            Entry.hw.sendQueue.PORT[i] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Entry.hw.update(); <span class="comment">// 하드웨어에 명시적으로 정보를 보냄</span></span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h4 id="다국어-명세"><a href="#다국어-명세" class="headerlink" title="다국어 명세"></a>다국어 명세</h4><blockquote>
