@@ -43,7 +43,9 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
         <!-- main page styles -->
-        <link rel="stylesheet" href="/docs/css/page.css">
+        
+<link rel="stylesheet" href="/docs/css/page.css">
+
 
         <!-- this needs to be loaded before guide's inline scripts -->
         <script>window.PAGE_TYPE = "guide"</script>
@@ -58,7 +60,7 @@
             ga('create', 'UA-103554573-1', 'auto');
             ga('send', 'pageview');
         </script>
-    </head>
+    <meta name="generator" content="Hexo 4.2.0"></head>
     <body class="docs">
         <div id="mobile-bar" >
             <a class="menu-button"></a>
@@ -113,7 +115,7 @@
                 
                 
                     
-                        <li><h3>START</h3></li>
+                        <li><h3>Quick Start</h3></li>
                     
                 
                 <li>
@@ -125,7 +127,7 @@
                     
                 
                 <li>
-                    <a href="/docs/guide/2018-07-30-tutorial.html" class="sidebar-link">엔트리 하드웨어 개발 튜토리얼</a>
+                    <a href="/docs/guide/quick_start/2018-07-30-tutorial.html" class="sidebar-link">엔트리 하드웨어 개발 튜토리얼</a>
                 </li>
             
         
@@ -134,11 +136,11 @@
                 
                 
                     
-                        <li><h3>Common</h3></li>
+                        <li><h3>Basic</h3></li>
                     
                 
                 <li>
-                    <a href="/docs/guide/common/2018-09-10-nodejs_setting.html" class="sidebar-link">Node.js 개발 환경 설정</a>
+                    <a href="/docs/guide/basic/2018-09-10-nodejs_setting.html" class="sidebar-link">Node.js 개발 환경 설정</a>
                 </li>
             
                 
@@ -146,7 +148,15 @@
                     
                 
                 <li>
-                    <a href="/docs/guide/common/2018-09-10-git_setting.html" class="sidebar-link">Git 개발 환경 설정</a>
+                    <a href="/docs/guide/basic/2018-09-10-git_setting.html" class="sidebar-link">Git 개발 환경 설정</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/basic/pull_request.html" class="sidebar-link">PR 요청하기</a>
                 </li>
             
         
@@ -155,7 +165,7 @@
                 
                 
                     
-                        <li><h3>Entryjs</h3></li>
+                        <li><h3>Entry JS</h3></li>
                     
                 
                 <li>
@@ -224,7 +234,7 @@
                 
                 
                     
-                        <li><h3>Entry Hw</h3></li>
+                        <li><h3>Entry HW</h3></li>
                     
                 
                 <li>
@@ -322,19 +332,6 @@
                 
                 
                     
-                        <li><h3>END</h3></li>
-                    
-                
-                <li>
-                    <a href="/docs/guide/end.html" class="sidebar-link">반영하기</a>
-                </li>
-            
-        
-    
-            
-                
-                
-                    
                         <li><h3>Etc.</h3></li>
                     
                 
@@ -347,7 +344,7 @@
                     
                 
                 <li>
-                    <a href="/docs/guide/etc/2016-07-07-faq.html" class="sidebar-link">FAQ</a>
+                    <a href="/docs/guide/etc/2019-12-11-updates.html" class="sidebar-link">문서 업데이트 내역</a>
                 </li>
             
                 
@@ -355,7 +352,7 @@
                     
                 
                 <li>
-                    <a href="/docs/guide/etc/2019-12-11-updates.html" class="sidebar-link">문서 업데이트 내역</a>
+                    <a href="/docs/guide/etc/2016-07-07-faq.html" class="sidebar-link">FAQ</a>
                 </li>
             
         
@@ -389,7 +386,7 @@
 </blockquote>
 <p>배포판의 경우, entryjs 를 그대로 사용하는 것이 아닌 bundle 된 데이터와 offline 에서 필요한 몇가지 파일만을 추출해서 사용합니다.<br>오프라인 프로젝트는 이에 맞춘 구조로 이루어져 있으므로, 동일한 구조로 만들어 주어야 합니다.</p>
 <p>구조는 아래와 같습니다.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">entryjs/</span><br><span class="line"> ...</span><br><span class="line">├─ dist/</span><br><span class="line">│  ├─ entry.css</span><br><span class="line">│  ├─ entry.js</span><br><span class="line">│  └─ entry.min.js</span><br><span class="line">├─ extern/</span><br><span class="line">├─ images/</span><br><span class="line">└─ src/</span><br><span class="line">   └─ playground/</span><br><span class="line">      ├─ blocks/</span><br><span class="line">      ├─ block_entry.js</span><br><span class="line">      └─ block_entry_mini.js</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">entryjs&#x2F;</span><br><span class="line"> ...</span><br><span class="line">├─ dist&#x2F;</span><br><span class="line">│  ├─ entry.css</span><br><span class="line">│  ├─ entry.js</span><br><span class="line">│  └─ entry.min.js</span><br><span class="line">├─ extern&#x2F;</span><br><span class="line">├─ images&#x2F;</span><br><span class="line">└─ src&#x2F;</span><br><span class="line">   └─ playground&#x2F;</span><br><span class="line">      ├─ blocks&#x2F;</span><br><span class="line">      ├─ block_entry.js</span><br><span class="line">      └─ block_entry_mini.js</span><br></pre></td></tr></table></figure>
 
 <p>아래와 같은 구조를 위해 직접 파일을 옮겨도 되나, 기존 배포구조 빌드의 경우 <code>entryjs/script/build.sh</code> 를 따르고 있습니다.<br>bash script 이므로 windows 에서는 git bash 등의 쉘을 사용하셔야 할 수 있습니다.</p>
 <p>이와 같은 파일 구조를 entry-offline/src/renderer/bower_components/entry-js 에 복사하시면 됩니다.</p>

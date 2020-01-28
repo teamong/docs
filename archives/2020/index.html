@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Hello World — Entry Docs</title>
+        <title>Entry Docs</title>
         <meta charset="utf-8">
         <meta name="description" content="Entry Docs - Entry 개발 가이드">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Hello World — Entry Docs">
+        <meta property="og:title" content="Entry Docs">
         <meta property="og:description" content="Entry Docs - Entry 개발 가이드">
         <meta property="og:image" content="https://entrylabs.github.io/docs/images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Hello World — Entry Docs">
+        <meta name="twitter:title" content="Entry Docs">
         <meta name="twitter:description" content="Entry Docs - Entry 개발 가이드">
         <meta name="twitter:image" content="https://entrylabs.github.io/docs/images/logo.png">
 
@@ -43,7 +43,9 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
         <!-- main page styles -->
-        <link rel="stylesheet" href="/docs/css/page.css">
+        
+<link rel="stylesheet" href="/docs/css/page.css">
+
 
         <!-- this needs to be loaded before guide's inline scripts -->
         <script>window.PAGE_TYPE = ""</script>
@@ -58,7 +60,7 @@
             ga('create', 'UA-103554573-1', 'auto');
             ga('send', 'pageview');
         </script>
-    </head>
+    <meta name="generator" content="Hexo 4.2.0"></head>
     <body class="docs">
         <div id="mobile-bar" >
             <a class="menu-button"></a>
@@ -87,11 +89,12 @@
         
             <div id="main" class="fix-sidebar">
                 
-                    <div class="sidebar blog">
+                    <div class="sidebar">
+  <div class="sidebar-inner-index">
     <ul class="main-menu">
-        <li>
+      <li>
   <form id="search-form">
-    <input type="text" id="search-query-nav" class="search-query st-default-search-input">
+    <input type="text" id="search-query-sidebar" class="search-query st-default-search-input">
   </form>
 </li>
 <li>
@@ -102,37 +105,77 @@
 </li>
 
     </ul>
-    <div class="list">
-        <h2>
-            Recent Posts
-            <a href="/docs/atom.xml" target="_blank" style="vertical-align: middle; margin-left: 5px">
-                <img src="/docs/images/feed.png" style="width:15px;height:15px">
-            </a>
-        </h2>
-        <ul style="padding:0">
-        
-            <li>
-                <a href="/2019/03/29/hello-world/" class="sidebar-link current">Hello World</a>
-            </li>
-        
-        </ul>
+  </div>
+</div>
+
+<div id="hero">
+  <div class="inner">
+    <div class="left">
+      <img class="hero-logo" src="/docs/images/main.png">
     </div>
-</div>
-<div class="content with-sidebar blog post">
-    <h1>Hello World</h1>
-    <h4>Mar 29, 2019</h4>
-    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+    <div class="right">
+      <h2 class="vue">Entry Docs</h2>
+      <h1>
+        엔트리는 누구나 무료로 소프트웨어 교육을 받을 수 있게 개발된 소프트웨어 교육 플랫폼입니다.
+      </h1>
+      <p>
+        <a class="button" href="/docs/guide/">시작하기</a>
+        <a class="button white" href="https://github.com/entrylabs/" target="_blank">GITHUB</a>
+      </p>
+    </div>
+  </div>
 </div>
 
+<div id="highlights">
+  <div class="inner">
+    <div class="point">
+      <h2>Entry Js</h2>
+      <p>엔트리 워크스페이스와 블록을
+        <br>개발 할 수 있는 라이브러리 입니다.</p>
+    </div>
+
+    <div class="point">
+      <h2>Entry Hardware</h2>
+      <p>엔트리에 아두이노 등
+        <br>여러 하드웨어를 연결 할 수 있도록
+        <br>도와주는 프로그램 입니다.</p>
+    </div>
+
+    <div class="point">
+      <h2>Entry Offline</h2>
+      <p>
+        엔트리를 오프라인 환경에서
+        <br> 사용 할수 있도록 만들어진
+        <br> 프로그램 입니다.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <a href="https://www.playentry.org" target="_blank">
+    <img src="/docs/images/logo_white.png" style="width:120px">
+  </a>
+  <p>Released under the
+    <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>
+    <br>
+    ©
+    <a href="http://blog.naver.com/connect_org" target="_blank">Connect Foundation.</a>
+  </p>
+</div>
+
+<script>
+  var topScrolled = false
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 165 && !topScrolled) {
+      topScrolled = true
+      document.getElementById('mobile-bar').classList.remove('top')
+    } else if (window.pageYOffset <= 165 && topScrolled) {
+      topScrolled = false
+      document.getElementById('mobile-bar').classList.add('top')
+    }
+  })
+</script>
                 
             </div>
             <script src="/docs/js/smooth-scroll.min.js"></script>

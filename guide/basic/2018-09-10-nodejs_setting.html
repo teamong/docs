@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>빌드하기 — Entry Docs</title>
+        <title>Node.js 개발 환경 설정 — Entry Docs</title>
         <meta charset="utf-8">
         <meta name="description" content="Entry Docs - Entry 개발 가이드">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="빌드하기 — Entry Docs">
+        <meta property="og:title" content="Node.js 개발 환경 설정 — Entry Docs">
         <meta property="og:description" content="Entry Docs - Entry 개발 가이드">
         <meta property="og:image" content="https://entrylabs.github.io/docs/images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="빌드하기 — Entry Docs">
+        <meta name="twitter:title" content="Node.js 개발 환경 설정 — Entry Docs">
         <meta name="twitter:description" content="Entry Docs - Entry 개발 가이드">
         <meta name="twitter:image" content="https://entrylabs.github.io/docs/images/logo.png">
 
@@ -140,7 +140,7 @@
                     
                 
                 <li>
-                    <a href="/docs/guide/basic/2018-09-10-nodejs_setting.html" class="sidebar-link">Node.js 개발 환경 설정</a>
+                    <a href="/docs/guide/basic/2018-09-10-nodejs_setting.html" class="sidebar-link current">Node.js 개발 환경 설정</a>
                 </li>
             
                 
@@ -323,7 +323,7 @@
                     
                 
                 <li>
-                    <a href="/docs/guide/entry-offline/2018-01-09-build.html" class="sidebar-link current">빌드하기</a>
+                    <a href="/docs/guide/entry-offline/2018-01-09-build.html" class="sidebar-link">빌드하기</a>
                 </li>
             
         
@@ -363,42 +363,39 @@
 </div>
 
 
-<div class="content guide with-sidebar 2018-01-09-build-guide">
+<div class="content guide with-sidebar 2018-09-10-nodejs_setting-guide">
     
       
     
     
-      <h1>빌드하기</h1>
+      <h1>Node.js 개발 환경 설정</h1>
     
-    <p>엔트리 오프라인은 설치파일로 만들어 배포가 가능한 프로젝트입니다.<br>이 문서에서는 코드를 exe 파일 형태로 <code>패키징</code> 하고, 인스톨러로 <code>빌드</code> 하는 방법에 대해 작성하였습니다.</p>
-<h2 id="Windows-빌드"><a href="#Windows-빌드" class="headerlink" title="Windows 빌드"></a>Windows 빌드</h2><h3 id="Windows-실행파일-만들기"><a href="#Windows-실행파일-만들기" class="headerlink" title="Windows 실행파일 만들기"></a>Windows 실행파일 만들기</h3><p>Windows 의 경우 현재 <code>패키징</code> 과 <code>빌드</code> 순서가 따로 분리되어 있습니다.<br>그러므로, 아래의 명령어로 먼저 <code>패키징</code>을 먼저 한 후, 따로 작성되어있는 NSIS 스크립트를 통해 <code>빌드</code> 해주셔야 합니다.<br>패키징과 관련된 기본동작의 경우 <code>electron-builder</code>에서 기본적인 작업을 수행하므로, <code>package.json</code>에 등록된 명령어를 수행합니다.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># win x64 build</span></span><br><span class="line">yarn dist:win64</span><br><span class="line"><span class="comment"># win x32 build</span></span><br><span class="line">yarn dist:win32</span><br></pre></td></tr></table></figure>
+    <h4 id="Node-js-설치-및-확인"><a href="#Node-js-설치-및-확인" class="headerlink" title="Node.js 설치 및 확인"></a>Node.js 설치 및 확인</h4><p>엔트리 프로젝트를 개발하기 위해 기본적으로 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>가 설치되어 있어야 합니다.</p>
+<p>Node.js와 함께 설치되는 라이브러리 관리 도구인 npm을 사용하면 엔트리 구동에 필요한 라이브러리를 설치할 수 있습니다.</p>
+<p>설치가 완료되면 명령 프롬프트 창에서 다음 명령어를 입력해 정상적으로 설치되었는지 확인합니다.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --version</span><br><span class="line">node --version</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>resource 파일이 상당히 많기 때문에 빌드 시간이 꽤나 오래 걸리게 됩니다.</p>
-</blockquote>
-<p>일렉트론의 경우 64 비트 환경에서 32 비트로 빌드하고 사운드 파일을 처리할때 크래시가 발생할 수 있어 타겟에 맞는 빌드가 필요합니다. 해당 빌드가 완료되면 <code>out</code> 폴더 밑에 실행파일이 만들어 집니다.</p>
-<h3 id="Windows-설치파일-만들기"><a href="#Windows-설치파일-만들기" class="headerlink" title="Windows 설치파일 만들기"></a>Windows 설치파일 만들기</h3><p>윈도우의 경우, 인스톨러 전 패키징된 파일들로만 만들어지게 됩니다.<br><code>Windows</code>용 설치파일을 만들기 위해선 먼저 <a href="http://nsis.sourceforge.net/Download" target="_blank" rel="noopener">NSIS</a>설치가 필요합니다. <code>NSIS</code>설치가 완료되고 나면 /build 의 <code>nsi</code>스크립트를 실행시켜 설치파일로 만들수 있습니다.</p>
-<p><code>nsi</code>의 스크립트 내용은 <a href="http://nsis.sourceforge.net/Docs/" target="_blank" rel="noopener">NSIS Document</a>를 참고하시기 바랍니다.</p>
-<h2 id="OSX-Mac-빌드"><a href="#OSX-Mac-빌드" class="headerlink" title="OSX(Mac) 빌드"></a>OSX(Mac) 빌드</h2><h3 id="OSX-설치파일-만들기"><a href="#OSX-설치파일-만들기" class="headerlink" title="OSX 설치파일 만들기"></a>OSX 설치파일 만들기</h3><p>OSX 의 경우에는 아래의 명령어를 통해 <code>app 패키징</code> 과 <code>dmg 빌드</code> 가 한번에 수행됩니다.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn dist:mac</span><br></pre></td></tr></table></figure>
+<p>정상적으로 설치되었다면 다음과 같은 결과가 출력됩니다. 버전은 다를 수 있습니다.</p>
+<p><img src="/docs/images/tutorial/tutorial03.png" alt="tutorial03"></p>
+<h4 id="entry-hw-필수-환경설정"><a href="#entry-hw-필수-환경설정" class="headerlink" title="entry-hw 필수 환경설정"></a>entry-hw 필수 환경설정</h4><p>엔트리 하드웨어는 시리얼포트 통신을 위해 <a href="https://github.com/node-serialport/node-serialport" target="_blank" rel="noopener">node-serialport</a> 라이브러리를 사용합니다.<br>해당 라이브러리를 사용하기 위해서는 C++, python 빌드 환경과 <a href="https://github.com/nodejs/node-gyp" target="_blank" rel="noopener">node-gyp</a> 라이브러리가 필요합니다.<br>빌드에 대한 자세한 사항은 <a href="https://github.com/nodejs/node-gyp#installation" target="_blank" rel="noopener">node-gyp#installation</a> 을 참고해 주세요.</p>
+<p>윈도우의 경우는 아래의 명령을 통해 파이썬, 윈도우 C++ 관련 툴을 설치해주세요. (관리자 모드 프롬프트에서 입력하세요)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global --production windows-build-tools</span><br></pre></td></tr></table></figure>
 
-<p><code>electron-builder</code>에서 알아서 <code>.app</code>파일과 <code>.dmg</code>파일을 제작하게 됩니다. 결과물은 <code>out</code>폴더에 생성이 되며, <code>.dmg</code>파일로 설치를 진행하면 됩니다. 자세한 설치파일 생성 옵션은 <a href="https://electronforge.io/" target="_blank" rel="noopener">Electron-Forge 문서</a> 사이트와 <a href="https://github.com/electron-userland/electron-forge" target="_blank" rel="noopener">README.md</a>를 읽어 보시기 바랍니다.</p>
-<h2 id="Codesign-서명"><a href="#Codesign-서명" class="headerlink" title="Codesign(서명)"></a>Codesign(서명)</h2><p>서명이란, 해당 프로그램이 자신이 만든 파일이라는 것을 입증하는 절차입니다. 실제 사용자에게 문제없이 프로그램을 전달하고 실행되기 위해선 이 과정이 필요합니다.<br>서명이 없다면 불법 프로그램으로 인식되거나, Windows 의 경우 매번 <code>Windows Smart Screen</code> 이 뜨는 번거로움이 있을 수 있습니다.</p>
-<p>하지만 개발용으로 사용시 따로 서명이 필요하지 않기 때문에, 이 문서에서는 <code>Codesign</code>에 대해서는 다루지 않습니다.</p>
+<p>그 다음 빌드 라이브러리인 node-gyp 을 설치해주세요.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global node-gyp</span><br></pre></td></tr></table></figure>
 
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/guide/entry-offline/2018-10-30-custom_project.html">커스텀 프로젝트 빌드</a></span>
         
+          <span style="float:right"><a href="/docs/guide/basic/2018-09-10-git_setting.html">Git 개발 환경 설정</a> →</span>
         
       </div>
     
     <div class="footer">
       Caught a mistake or want to contribute to the documentation?
-      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entry-offline/2018-01-09-build.md" target="_blank"> -->
-      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/entry-offline/2018-01-09-build.md" target="_blank">
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/basic/2018-09-10-nodejs_setting.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/basic/2018-09-10-nodejs_setting.md" target="_blank">
         Edit this page on Github!
       </a>
       <div id="disqus_thread"></div>
