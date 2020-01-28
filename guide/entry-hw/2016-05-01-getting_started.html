@@ -140,15 +140,7 @@
                     
                 
                 <li>
-                    <a href="/docs/guide/basic/2018-09-10-nodejs_setting.html" class="sidebar-link">Node.js 개발 환경 설정</a>
-                </li>
-            
-                
-                
-                    
-                
-                <li>
-                    <a href="/docs/guide/basic/2018-09-10-git_setting.html" class="sidebar-link">Git 개발 환경 설정</a>
+                    <a href="/docs/guide/basic/setting_environment.html" class="sidebar-link">개발 환경 세팅</a>
                 </li>
             
                 
@@ -157,6 +149,14 @@
                 
                 <li>
                     <a href="/docs/guide/basic/pull_request.html" class="sidebar-link">PR 요청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/basic/2016-07-07-faq.html" class="sidebar-link">자주 하는 질문</a>
                 </li>
             
         
@@ -262,6 +262,14 @@
                     
                 
                 <li>
+                    <a href="/docs/guide/entry-hw/cli_test_hardware.html" class="sidebar-link">하드웨어 연결 테스트하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
                     <a href="/docs/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link">하드웨어 등록 서비스 신청하기</a>
                 </li>
             
@@ -347,14 +355,6 @@
                     <a href="/docs/guide/etc/2019-12-11-updates.html" class="sidebar-link">문서 업데이트 내역</a>
                 </li>
             
-                
-                
-                    
-                
-                <li>
-                    <a href="/docs/guide/etc/2016-07-07-faq.html" class="sidebar-link">FAQ</a>
-                </li>
-            
         
 </ul>
 
@@ -372,35 +372,22 @@
     
     <p>Entry Hardware 는 엔트리에서 개발한 엔트리와 하드웨어를 연동하기 위한 프로그램입니다.<br>엔트리에 신규 하드웨어를 등록하기 위해서는 Entry Hardware 에 하드웨어 모듈을 추가해야합니다.</p>
 <h2 id="엔트리-하드웨어-추가-순서"><a href="#엔트리-하드웨어-추가-순서" class="headerlink" title="엔트리 하드웨어 추가 순서"></a>엔트리 하드웨어 추가 순서</h2><ol>
-<li>하드웨어 등록 신청서 작성 및 제출(<a href="./2017-05-16-enroll_entry-hw.html">상세안내</a>)</li>
-<li><a href=".//2016-05-03-add_module.html">하드웨어 모듈 추가하기</a></li>
-<li>하드웨어와 연동되는 <a href="..//entryjs/2016-05-22-add_new_blocks.html">엔트리 블록 만들기</a></li>
+<li>하드웨어 등록 신청서 작성 및 제출(<a href="/docs/guide/entry-hw/2017-05-16-enroll_entry-hw.html">상세안내</a>)</li>
+<li><a href="/docs/guide/entry-hw/2016-05-03-add_module.html">하드웨어 모듈 추가하기</a></li>
+<li>하드웨어와 연동되는 <a href="/docs/guide/entryjs/2016-05-22-add_new_blocks.html">엔트리 블록 만들기</a></li>
 <li>실행하여 테스트하기</li>
-<li>테스트코드 <a href="../etc/2016-05-03-git_fork.html">GitHub의 Pull Request로 전달</a>하기</li>
+<li>테스트코드 <a href="/docs/guide/etc/2016-05-03-git_fork.html">GitHub의 Pull Request로 전달</a>하기</li>
 <li>하드웨어 ID 발급 받기</li>
 <li>엔트리 서비스 정기 반영을 통한 하드웨어 추가</li>
 </ol>
-<p>엔트리 하드웨어의 개발 환경 및 버전은 아래와 같습니다.<br><a href="https://electronjs.org" target="_blank" rel="noopener">Electron</a>: 7.x.x<br><a href="https://serialport.io" target="_blank" rel="noopener">Node-Serialport</a>: 8.x.x</p>
-<h2 id="개발환경-세팅"><a href="#개발환경-세팅" class="headerlink" title="개발환경 세팅"></a>개발환경 세팅</h2><h3 id="프로젝트-포크"><a href="#프로젝트-포크" class="headerlink" title="프로젝트 포크"></a>프로젝트 포크</h3><p>엔트리 개발시 엔트리의 원본 프로젝트에 직접 작업은 허용되지 않습니다.<br>그러므로 프로젝트를 복사하는 <code>fork</code> 작업을 거쳐야 합니다.<br>먼저, Entry-HW GitHub 페이지에 접속 합니다.  </p>
-<blockquote>
-<p><a href="https://github.com/entrylabs/entry-hw" target="_blank" rel="noopener">https://github.com/entrylabs/entry-hw</a>  </p>
-</blockquote>
-<p>사이트 접속 후 우측 상단에 있는 Fork 버튼을 클릭합니다.<br><img src="../../images/entry-hw/fork2.png" alt="Fork2">  </p>
-<p>Fork를 통하여 본인 계정으로 해당 Repository를 복사합니다. 복사한 레포지토리를 git clone으로 내 로컬 컴퓨터에 다운 받아 개발 가능한 상태로 만듭니다.</p>
-<h3 id="클론"><a href="#클론" class="headerlink" title="클론"></a>클론</h3><p>fork 를 통해 원격 저장소를 복사하였으면, 로컬로 저장소를 가져와야 합니다. <code>git clone</code>을 수행하여 로컬에 해당 소스를 받습니다.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/(본인의 Repository)/entry-hw.git</span><br></pre></td></tr></table></figure>
+<h2 id="개발환경-세팅"><a href="#개발환경-세팅" class="headerlink" title="개발환경 세팅"></a>개발환경 세팅</h2><h3 id="프로젝트-포크"><a href="#프로젝트-포크" class="headerlink" title="프로젝트 포크"></a>프로젝트 포크</h3><p>엔트리 개발시 엔트리의 원본 프로젝트에 직접 작업은 허용되지 않습니다.<br>그러므로 프로젝트를 복사하는 <code>fork</code> 작업을 거쳐야 합니다.<br>먼저, <a href="https://github.com/entrylabs/entry-hw" target="_blank" rel="noopener">Entry-HW GitHub</a> 페이지에 접속 합니다.  </p>
+<p>사이트 접속 후 우측 상단에 있는 Fork 버튼을 클릭합니다.<br><img src="/docs/images/entry-hw/fork2.png" alt="Fork2">  </p>
+<p>이후, 복사한 레포지토리를 git clone으로 내 로컬 컴퓨터에 다운 받아 개발 가능한 상태로 만듭니다.</p>
+<h3 id="클론"><a href="#클론" class="headerlink" title="클론"></a>클론</h3><p>fork 를 통해 원격 저장소를 복사하였으면, 로컬로 저장소를 가져와야 합니다.<br><code>git clone</code> 을 수행하여 로컬에 해당 소스를 받습니다. 기본 브랜치인 <code>develop-hw</code> 를 기본브랜치로 가져오기 위해선 아래와 같이 입력합니다.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> -b develop-hw https://github.com/(본인의 계정)/entry-hw.git</span><br></pre></td></tr></table></figure>
 
-<h3 id="Node-gyp-설치"><a href="#Node-gyp-설치" class="headerlink" title="Node-gyp 설치"></a>Node-gyp 설치</h3><p>엔트리 하드웨어는 시리얼포트 통신을 위해 <a href="https://github.com/node-serialport/node-serialport" target="_blank" rel="noopener">node-serialport</a> 라이브러리를 사용합니다.<br>해당 라이브러리를 사용하기 위해서는 C++, python 빌드 환경과 <a href="https://github.com/nodejs/node-gyp" target="_blank" rel="noopener">node-gyp</a> 라이브러리가 필요합니다.<br>빌드에 대한 자세한 사항은 <a href="https://github.com/nodejs/node-gyp#installation" target="_blank" rel="noopener">node-gyp#installation</a> 을 참고해 주세요.</p>
-<p>윈도우의 경우는 아래의 명령을 통해 파이썬, 윈도우 C++ 관련 툴을 설치해주세요. (관리자 모드 프롬프트에서 입력하세요)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global --production windows-build-tools</span><br></pre></td></tr></table></figure>
-
-<p>그 다음 빌드 라이브러리인 node-gyp 을 설치해주세요.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global node-gyp</span><br></pre></td></tr></table></figure>
-
-<h3 id="의존성-모듈-설치"><a href="#의존성-모듈-설치" class="headerlink" title="의존성 모듈 설치"></a>의존성 모듈 설치</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
-<h3 id="Electron-Rebuild"><a href="#Electron-Rebuild" class="headerlink" title="Electron Rebuild"></a>Electron Rebuild</h3><p>엔트리 하드웨어가 디바이스와 통신하기 위한 라이브러리는 C++ 로 개발되어있기 때문에, Native Addon 사용을 위한 빌드가 필요합니다.<br>의존성 모듈 설치시 자동으로 실행되나, 명시적으로 실행하고자 하는 경우 아래의 명령어를 입력합니다.</p>
-<figure class="highlight coffeescript"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">npm</span> rebuild</span><br></pre></td></tr></table></figure>
+<h3 id="Node-gyp-설치"><a href="#Node-gyp-설치" class="headerlink" title="Node-gyp 설치"></a>Node-gyp 설치</h3><p><a href="http://localhost:5000/docs/guide/basic/setting_environment.html#SerialPort-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EB%B9%8C%EB%93%9C-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%B9%98" target="_blank" rel="noopener">SerialPort 라이브러리 빌드 환경 설치</a> 를 참고해주세요.</p>
+<h3 id="의존성-모듈-설치"><a href="#의존성-모듈-설치" class="headerlink" title="의존성 모듈 설치"></a>의존성 모듈 설치</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br><span class="line">$ npx electron-rebuild -f <span class="comment"># 만약 시리얼포트 빌드 간 문제가 있는 경우 재 빌드</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="실행"><a href="#실행" class="headerlink" title="실행"></a>실행</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run start</span><br></pre></td></tr></table></figure>
 

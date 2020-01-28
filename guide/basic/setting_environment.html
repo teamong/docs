@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>시작하기 — Entry Docs</title>
+        <title>개발 환경 세팅 — Entry Docs</title>
         <meta charset="utf-8">
         <meta name="description" content="Entry Docs - Entry 개발 가이드">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="시작하기 — Entry Docs">
+        <meta property="og:title" content="개발 환경 세팅 — Entry Docs">
         <meta property="og:description" content="Entry Docs - Entry 개발 가이드">
         <meta property="og:image" content="https://entrylabs.github.io/docs/images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="시작하기 — Entry Docs">
+        <meta name="twitter:title" content="개발 환경 세팅 — Entry Docs">
         <meta name="twitter:description" content="Entry Docs - Entry 개발 가이드">
         <meta name="twitter:image" content="https://entrylabs.github.io/docs/images/logo.png">
 
@@ -140,15 +140,7 @@
                     
                 
                 <li>
-                    <a href="/docs/guide/basic/2018-09-10-nodejs_setting.html" class="sidebar-link">Node.js 개발 환경 설정</a>
-                </li>
-            
-                
-                
-                    
-                
-                <li>
-                    <a href="/docs/guide/basic/2018-09-10-git_setting.html" class="sidebar-link">Git 개발 환경 설정</a>
+                    <a href="/docs/guide/basic/setting_environment.html" class="sidebar-link current">개발 환경 세팅</a>
                 </li>
             
                 
@@ -157,6 +149,14 @@
                 
                 <li>
                     <a href="/docs/guide/basic/pull_request.html" class="sidebar-link">PR 요청하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
+                    <a href="/docs/guide/basic/2016-07-07-faq.html" class="sidebar-link">자주 하는 질문</a>
                 </li>
             
         
@@ -262,6 +262,14 @@
                     
                 
                 <li>
+                    <a href="/docs/guide/entry-hw/cli_test_hardware.html" class="sidebar-link">하드웨어 연결 테스트하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
                     <a href="/docs/guide/entry-hw/2017-05-16-enroll_entry-hw.html" class="sidebar-link">하드웨어 등록 서비스 신청하기</a>
                 </li>
             
@@ -347,14 +355,6 @@
                     <a href="/docs/guide/etc/2019-12-11-updates.html" class="sidebar-link">문서 업데이트 내역</a>
                 </li>
             
-                
-                
-                    
-                
-                <li>
-                    <a href="/docs/guide/etc/2016-07-07-faq.html" class="sidebar-link">FAQ</a>
-                </li>
-            
         
 </ul>
 
@@ -363,46 +363,53 @@
 </div>
 
 
-<div class="content guide with-sidebar 2016-12-12-getting_started-guide">
+<div class="content guide with-sidebar setting_environment-guide">
     
       
     
     
-      <h1>시작하기</h1>
+      <h1>개발 환경 세팅</h1>
     
-    <h2 id="Entryjs로-개발하기"><a href="#Entryjs로-개발하기" class="headerlink" title="Entryjs로 개발하기"></a>Entryjs로 개발하기</h2><p>기존의 하드웨어 블록을 개발하기 위하여 entryjs/example/example.html를 지원해 왔습니다. 실과형(엔트리 미니)에서는 entryjs/example/example_mini.html를 제공하고 있습니다. 이 문서는 기존적으로 엔트리 하드웨어 블록생성 및 하드웨어를 추가하는 가이드를 숙지 했다는 가정하에 설명을 진행합니다. 이 문서를 보시기 전에 하드웨어 가이드 및 블록 개발 가이드를 보시고 진행하시길 바랍니다. fork 및 저장소 clone에 대해서는 Etc. 가이드를 참고하세요.</p>
-<h3 id="branch-checkout"><a href="#branch-checkout" class="headerlink" title="branch checkout"></a>branch checkout</h3><p><del>~ 현재 offline_mini는 feature/offline_mini에 관리되고 있습니다. git 터미널에서 다음과 같이 명령어를 실행합니다. ~</del><br><code>offline_mini</code> 버전은 이제 따로 업데이트 되지 않습니다. 일반적인 <code>entryjs</code>에 <code>entry-mini</code> 내용이 포함되어 배포되고 있습니다.<br>개발에는 <code>develop</code> 또는 <code>develop-hw</code> 브랜치를 활용해 주세요.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git checkout -b feature/develop origin/feature/develop</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>GUI툴을 사용하시면 기존에 사용하셨던 방법 그대로 develop 브랜치를 checkout하시기 바랍니다.</p>
+    <h2 id="Git-설치"><a href="#Git-설치" class="headerlink" title="Git 설치"></a>Git 설치</h2><blockquote>
+<p>연관 페이지 : <a href="/docs/guide/etc/2016-05-03-git_fork.html">Git 사용 방법</a></p>
 </blockquote>
-<h3 id="npm-install-amp-build"><a href="#npm-install-amp-build" class="headerlink" title="npm install &amp; build"></a>npm install &amp; build</h3><p>의존성 모듈 설치를 위하여 npm install 을 수행합니다.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br><span class="line">//또는</span><br><span class="line">$ yarn</span><br></pre></td></tr></table></figure>
-
-<p>이제 빌드는 <code>grunt</code>가 아닌 <code>webpack</code>으로 하게 됩니다. 아래와 같이 실행해 주시면 됩니다.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// 배포시</span><br><span class="line">$ npm run dist</span><br><span class="line">// 개발시</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
-
-<h3 id="example-mini-html-실행"><a href="#example-mini-html-실행" class="headerlink" title="example_mini.html 실행"></a>example_mini.html 실행</h3><p>기본적으로 기존 example.html 사용법과 같습니다. 아래 링크를 참조해 주세요.<br><img src="/docs/images/entry_mini/2016-12-12_15-56-59.gif" alt="크롬에서 실행하기"></p>
-<h3 id="블록-생성하기"><a href="#블록-생성하기" class="headerlink" title="블록 생성하기"></a>블록 생성하기</h3><p>블록 생성방법은 기존 하드웨어 가이드 문서에 작성된 가이드와 동일 합니다. 다만 관리와 기존 Entry Workspace와의 분리를 위하여 작성하는 파일이 위치만 변경되었습니다.</p>
+<p>엔트리의 오픈소스 프로젝트는 Git을 사용하여 관리합니다.<br>Git을 사용하여 코드를 기록하고 반영하므로 반드시 Git을 설치해야 합니다.</p>
+<ul>
+<li>macOS, Windows 사용자는 <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git - Downloads</a>에서 Git 설치 파일을 다운로드하여 실행합니다.</li>
+<li>Linux 사용자는 <a href="https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98" target="_blank" rel="noopener">Git - Git 설치</a>를 참고하여 Git을 설치합니다.</li>
+</ul>
+<hr>
+<p>Git 사용이 익숙치 않다면, Git GUI 도구를 사용하는 것도 좋습니다. (선택사항)<br>아래의 도구를 사용하여 좀 더 쉽게 Git 작업을 하실 수 있습니다.</p>
 <blockquote>
-<p>블록 개발 가이드는 <a href="../entryjs/2016-12-26-setting_environments.html">Entry JS 개발 가이드</a>를 참고해 주세요.</p>
+<p><a href="https://desktop.github.com/" target="_blank" rel="noopener">Github Desktop</a><br><a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">SourceTree</a></p>
 </blockquote>
-<p>먼저 블록의 위치는 entryjs/src/workspace/block_entry_mini.js 입니다. block_entry.js 파일에도 수정하면 내용이 반영되나 git PR merge시에 reject사유가 될 수 있으니 작업은 block_entry_mini.js에 부탁드립니다. 또한 isNotFor 요소가 중요하게 사용되오니 꼭 작성 부탁드립니다.</p>
-<h3 id="블록-등록하기"><a href="#블록-등록하기" class="headerlink" title="블록 등록하기"></a>블록 등록하기</h3><p>블록생성 종료 되었으면 실제 Workspace에 포함시켜야 합니다. 기존에는 entryjs/extern/util/static.js 의 arudino 카테고리에 포함시켰는데 실과형(Entry-mini)에서는 entryjs/extern/util/static_mini.js 에 작성하고 arduino카테고리가 아닌 성격에 맞는 카테고리에 포함시키고 있습니다.</p>
-<p><img src="/docs/images/entry_mini/2016-12-12_16-20-37.png" alt="사용되는 카테고리"><br><img src="/docs/images/entry_mini/2016-12-12_16-23-32.png" alt="사용되는 카테고리2"></p>
-<p>현재 사용되는 있는 카테고리는 위와 같으며, 현재로선 다른 카테고리를 허용하지는 않습니다. 다만 다른카테고리가 필요하신경우 문의 부탁드립니다.</p>
-<h3 id="실과형-로봇-등록하기"><a href="#실과형-로봇-등록하기" class="headerlink" title="실과형 로봇 등록하기"></a>실과형 로봇 등록하기</h3><p>실과형에서는 실과형인지 기존의 하드웨어인지 구분하는 1가지 옵션이 추가로 생겼습니다. static_mini.js에 추가되어 있으며 명칭은 hwMiniSupportList입니다.<br>hwMiniSupportList는 Array로 되어 있으며 하드웨어의 명칭을 추가 하시면 자동으로 Mini에서 사용되는 하드웨어로 취급되어 정상적으로 카테고리가 동작하게 됩니다.<br>해당 속성이 빠져 있을경우 기존의 하드웨어 블록이 그대로 사용되니 이점 주의 부탁드립니다.</p>
+<h2 id="NodeJS-설치"><a href="#NodeJS-설치" class="headerlink" title="NodeJS 설치"></a>NodeJS 설치</h2><p>엔트리 프로젝트를 개발하기 위해 기본적으로 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>가 설치되어 있어야 합니다.</p>
+<p>Node.js와 함께 설치되는 라이브러리 관리 도구인 npm을 사용하면 엔트리 구동에 필요한 라이브러리를 설치할 수 있습니다.</p>
+<p>설치가 완료되면 명령 프롬프트 창에서 다음 명령어를 입력해 정상적으로 설치되었는지 확인합니다.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm --version</span><br><span class="line">node --version</span><br></pre></td></tr></table></figure>
+
+<p>정상적으로 설치되었다면 다음과 같은 결과가 출력됩니다. 버전은 다를 수 있습니다.</p>
+<p><img src="/docs/images/tutorial/tutorial03.png" alt="tutorial03"></p>
+<h2 id="SerialPort-라이브러리-빌드-환경-설치"><a href="#SerialPort-라이브러리-빌드-환경-설치" class="headerlink" title="SerialPort 라이브러리 빌드 환경 설치"></a>SerialPort 라이브러리 빌드 환경 설치</h2><p>엔트리 하드웨어는 시리얼포트 통신을 위해 <a href="https://github.com/node-serialport/node-serialport" target="_blank" rel="noopener">node-serialport</a> 라이브러리를 사용합니다.<br>해당 라이브러리를 사용하기 위해서는 C++, python 빌드 환경과 <a href="https://github.com/nodejs/node-gyp" target="_blank" rel="noopener">node-gyp</a> 라이브러리가 필요합니다.<br>빌드에 대한 자세한 사항은 <a href="https://github.com/nodejs/node-gyp#installation" target="_blank" rel="noopener">node-gyp#installation</a> 을 참고해 주세요.</p>
+<p>C++ 빌드 라이브러리인 node-gyp 을 설치해주세요.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global node-gyp</span><br></pre></td></tr></table></figure>
+
+<p><strong>윈도우의 경우</strong>는 아래의 명령을 통해 파이썬, 윈도우 C++ 관련 툴을 설치해주세요. (관리자 모드 프롬프트에서 입력하세요)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --global --production windows-build-tools</span><br></pre></td></tr></table></figure>
+
 
     
       <div class="guide-links">
         
         
+          <span style="float:right"><a href="/docs/guide/basic/pull_request.html">PR 요청하기</a> →</span>
+        
       </div>
     
     <div class="footer">
       Caught a mistake or want to contribute to the documentation?
-      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entry-mini/2016-12-12-getting_started.md" target="_blank"> -->
-      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/entry-mini/2016-12-12-getting_started.md" target="_blank">
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/basic/setting_environment.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/basic/setting_environment.md" target="_blank">
         Edit this page on Github!
       </a>
       <div id="disqus_thread"></div>
