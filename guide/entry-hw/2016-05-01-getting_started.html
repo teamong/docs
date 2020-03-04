@@ -387,7 +387,10 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> -b develop-hw https://github.com/(본인의 계정)/entry-hw.git</span><br></pre></td></tr></table></figure>
 
 <h3 id="Node-gyp-설치"><a href="#Node-gyp-설치" class="headerlink" title="Node-gyp 설치"></a>Node-gyp 설치</h3><p><a href="/docs/guide/basic/setting_environment.html#SerialPort-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EB%B9%8C%EB%93%9C-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%B9%98">SerialPort 라이브러리 빌드 환경 설치</a> 를 참고해주세요.</p>
-<h3 id="의존성-모듈-설치"><a href="#의존성-모듈-설치" class="headerlink" title="의존성 모듈 설치"></a>의존성 모듈 설치</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br><span class="line">$ npm run rebuild <span class="comment"># 만약 시리얼포트 빌드 간 문제가 있는 경우 재 빌드</span></span><br></pre></td></tr></table></figure>
+<h3 id="의존성-모듈-설치"><a href="#의존성-모듈-설치" class="headerlink" title="의존성 모듈 설치"></a>의존성 모듈 설치</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<h3 id="웹팩-번들링"><a href="#웹팩-번들링" class="headerlink" title="웹팩 번들링"></a>웹팩 번들링</h3><p>시리얼포트 라이브러리 빌드 및 webpack 번들링을 합니다. 각 명령어를 따로 실행해도 되지만 <code>npm run setting</code> 으로 한번에 실행하실 수도 있습니다.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run setting <span class="comment"># npm run rebuild &amp;&amp; npm run webpack:dev</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="실행"><a href="#실행" class="headerlink" title="실행"></a>실행</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run start</span><br></pre></td></tr></table></figure>
 
