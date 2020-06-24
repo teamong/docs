@@ -352,6 +352,14 @@
                     
                 
                 <li>
+                    <a href="/docs/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link">문서 기여하기</a>
+                </li>
+            
+                
+                
+                    
+                
+                <li>
                     <a href="/docs/guide/etc/2019-12-11-updates.html" class="sidebar-link current">문서 업데이트 내역</a>
                 </li>
             
@@ -370,17 +378,29 @@
     
       <h1>문서 업데이트 내역</h1>
     
-    <h2 id="2019-12-11"><a href="#2019-12-11" class="headerlink" title="2019-12-11"></a>2019-12-11</h2><ul>
-<li>entry-hw 작업 브랜치명을 master -&gt; develop-hw 로 변경<ul>
-<li>develop-hw 는 실질적으론 master 를 바라보고 있으나, 작업 편의상 따로 분류해두었습니다.</li>
-<li>develop 은 내부개발 / master 는 최종 빌드용으로 사용됩니다.</li>
+    <h2 id="2020-06-24"><a href="#2020-06-24" class="headerlink" title="2020-06-24"></a>2020-06-24</h2><ul>
+<li>Entry Docs 문서 기여 가이드 작성</li>
+</ul>
+<h2 id="2020-06-04"><a href="#2020-06-04" class="headerlink" title="2020-06-04"></a>2020-06-04</h2><ul>
+<li>하드웨어 configuration 중 select_com_port 를 selectPort 로 명칭 변경<ul>
+<li>프로퍼티는 lint convention 에 따라 camel-case 작명을 따르게 되어있음</li>
+<li>해당 프로퍼티는 다른 모든 프로퍼티가 camel-case 를 따르나 혼자만 snake-case 작명법을 따름</li>
+<li>프로퍼티 명명법의 통일을 위해 selectPort 로 변경하였음</li>
 </ul>
 </li>
 </ul>
-<h2 id="2020-1-28"><a href="#2020-1-28" class="headerlink" title="2020-1-28"></a>2020-1-28</h2><ul>
-<li>카테고리 명칭 변경</li>
-<li>기본 세팅 글 통합 (한번에 볼 수 있게 만들기 위함)</li>
-<li>하드웨어 테스트 관련 가이드 추가</li>
+<h2 id="2020-05-29"><a href="#2020-05-29" class="headerlink" title="2020-05-29"></a>2020-05-29</h2><ul>
+<li>하드웨어 configuration 중 entry: {protocol: ‘json’} 삭제<ul>
+<li>해당 프로퍼티는 추후 WS 와의 통신 방식을 binary, raw, json 등으로 분할하고자 만들었습니다만,<br>한동안은 json 외의 통신을 허용하지 않을 것이므로 불필요한 프로퍼티를 제거할 예정입니다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="2020-03-04"><a href="#2020-03-04" class="headerlink" title="2020-03-04"></a>2020-03-04</h2><ul>
+<li>튜토리얼 및 하드웨어 세팅에서 <code>npm run rebuild</code> -&gt; <code>npm run setting</code> 으로 수정<ul>
+<li>webpack 번들링 스크립트를 필수적으로 1회 이상 실행해야 하므로 두가지 기능을 하는 스크립트로 수정</li>
+</ul>
+</li>
+<li>tutorial 에서 npm / node 버전 업데이트</li>
 </ul>
 <h2 id="2020-02-11"><a href="#2020-02-11" class="headerlink" title="2020-02-11"></a>2020-02-11</h2><ul>
 <li>튜토리얼 업데이트<ul>
@@ -392,16 +412,23 @@
 <li>BLE 지원단계 표기</li>
 <li>하드웨어 최초 실행시 스크립트 npx electron-rebuild -f -&gt; npm run rebuild 로 변경</li>
 </ul>
-<h2 id="2020-03-04"><a href="#2020-03-04" class="headerlink" title="2020-03-04"></a>2020-03-04</h2><ul>
-<li>튜토리얼 및 하드웨어 세팅에서 <code>npm run rebuild</code> -&gt; <code>npm run setting</code> 으로 수정<ul>
-<li>webpack 번들링 스크립트를 필수적으로 1회 이상 실행해야 하므로 두가지 기능을 하는 스크립트로 수정</li>
+<h2 id="2020-1-28"><a href="#2020-1-28" class="headerlink" title="2020-1-28"></a>2020-1-28</h2><ul>
+<li>카테고리 명칭 변경</li>
+<li>기본 세팅 글 통합 (한번에 볼 수 있게 만들기 위함)</li>
+<li>하드웨어 테스트 관련 가이드 추가</li>
+</ul>
+<h2 id="2019-12-11"><a href="#2019-12-11" class="headerlink" title="2019-12-11"></a>2019-12-11</h2><ul>
+<li>entry-hw 작업 브랜치명을 master -&gt; develop-hw 로 변경<ul>
+<li>develop-hw 는 실질적으론 master 를 바라보고 있으나, 작업 편의상 따로 분류해두었습니다.</li>
+<li>develop 은 내부개발 / master 는 최종 빌드용으로 사용됩니다.</li>
 </ul>
 </li>
-<li>tutorial 에서 npm / node 버전 업데이트</li>
 </ul>
 
     
       <div class="guide-links">
+        
+          <span>← <a href="/docs/guide/etc/2020-06-24-doc_contribution.html">문서 기여하기</a></span>
         
         
       </div>

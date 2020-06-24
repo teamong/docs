@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>커스텀 프로젝트 빌드 — Entry Docs</title>
+        <title>문서 기여하기 — Entry Docs</title>
         <meta charset="utf-8">
         <meta name="description" content="Entry Docs - Entry 개발 가이드">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <meta property="og:type" content="article">
-        <meta property="og:title" content="커스텀 프로젝트 빌드 — Entry Docs">
+        <meta property="og:title" content="문서 기여하기 — Entry Docs">
         <meta property="og:description" content="Entry Docs - Entry 개발 가이드">
         <meta property="og:image" content="https://entrylabs.github.io/docs/images/logo.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="커스텀 프로젝트 빌드 — Entry Docs">
+        <meta name="twitter:title" content="문서 기여하기 — Entry Docs">
         <meta name="twitter:description" content="Entry Docs - Entry 개발 가이드">
         <meta name="twitter:image" content="https://entrylabs.github.io/docs/images/logo.png">
 
@@ -323,7 +323,7 @@
                     
                 
                 <li>
-                    <a href="/docs/guide/entry-offline/2018-10-30-custom_project.html" class="sidebar-link current">커스텀 프로젝트 빌드</a>
+                    <a href="/docs/guide/entry-offline/2018-10-30-custom_project.html" class="sidebar-link">커스텀 프로젝트 빌드</a>
                 </li>
             
                 
@@ -352,7 +352,7 @@
                     
                 
                 <li>
-                    <a href="/docs/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link">문서 기여하기</a>
+                    <a href="/docs/guide/etc/2020-06-24-doc_contribution.html" class="sidebar-link current">문서 기여하기</a>
                 </li>
             
                 
@@ -371,57 +371,70 @@
 </div>
 
 
-<div class="content guide with-sidebar 2018-10-30-custom_project-guide">
+<div class="content guide with-sidebar 2020-06-24-doc_contribution-guide">
     
       
     
     
-      <h1>커스텀 프로젝트 빌드</h1>
+      <h1>문서 기여하기</h1>
     
-    <h2 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h2><p>엔트리 오프라인은 내부적으로 entryjs, entry-hw 프로젝트를 포함하고 있습니다.<br>정식 릴리즈판의 경우, 운영되고 있는 버전의 1달 이전 버전을 사용하기 때문에 빠른 반영을 원하시는 분이 있을 수 있습니다.</p>
-<p>이에 관련하여 이 문서에서는 자신이 개발한 entryjs 혹은 entry-hw 버전으로 교체하여 오프라인 프로젝트를 빌드하는 방법을 작성하였습니다.</p>
-<h2 id="연동-구조"><a href="#연동-구조" class="headerlink" title="연동 구조"></a>연동 구조</h2><p>엔트리 오프라인은 렌더러 프로세스에서 entryjs, entry-hw 프로젝트를 가져오는 구조입니다.</p>
-<p>아래는 bower.json 에 기술된 내용입니다.</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="attr">"dependencies"</span>: &#123;</span><br><span class="line">        <span class="attr">"entry-hw"</span>: <span class="string">"https://github.com/entrylabs/entry-hw.git#[latest tag version]"</span>,</span><br><span class="line">        <span class="comment">//other dependencies...</span></span><br><span class="line">        <span class="attr">"entryjs"</span>: <span class="string">"#[latest tag version]"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>entry-hw 는 직접 github 에서 데이터를 가져오며, entryjs 는 bower 저장소에 등록된 버전을 가져오는 형태를 띄고 있습니다.</p>
-<p>만약 자신이 작업한 entry, entry-hw 를 오프라인 프로젝트에 반영하고자 한다면, 이를 수정하여 적용할 수 있습니다.</p>
+    <h2 id="Entry-Docs-문서-기여"><a href="#Entry-Docs-문서-기여" class="headerlink" title="Entry Docs 문서 기여"></a>Entry Docs 문서 기여</h2><p>Entry Docs 는 Github PR 로 문서에 기여할 수 있습니다.</p>
+<p>엔트리에 대한 내용이나, 오탈자 및 내용보충이 필요한 경우 누구든지 반영을 요청하실 수 있습니다.</p>
+<p>Entry Docs 는 github project 이므로, 기본적으로는 git 을 사용하실 수 있어야 합니다.</p>
+<h2 id="기여-방법"><a href="#기여-방법" class="headerlink" title="기여 방법"></a>기여 방법</h2><h3 id="Repository-클론"><a href="#Repository-클론" class="headerlink" title="Repository 클론"></a>Repository 클론</h3><p>먼저 repository 를 가져옵니다.</p>
 <blockquote>
-<p>entry-hw 의 경우 : ht<span>tps://github.co</span>m/[자신의 ID]/entry-hw.git#master<br>entryjs 의 경우 : ht<span>tps://github.co</span>m/[자신의 ID]/entryjs.git#master</p>
+<p>git clone <a href="https://github.com/entrylabs/docs" target="_blank" rel="noopener">https://github.com/entrylabs/docs</a></p>
 </blockquote>
-<h2 id="반영-절차"><a href="#반영-절차" class="headerlink" title="반영 절차"></a>반영 절차</h2><h3 id="각-프로젝트-fork-하기"><a href="#각-프로젝트-fork-하기" class="headerlink" title="각 프로젝트 fork 하기"></a>각 프로젝트 fork 하기</h3><p>반영하고자 하는 프로젝트를 먼저 fork 합니다. fork 방법은 각 가이드문서(<a href="/docs/guide/entryjs/2018-03-09-getting_started.html">entryjs</a>, <a href="/docs/guide/entry-hw/2016-05-01-getting_started.html">entry-hw</a>)<br>를 참고해주세요.</p>
-<h3 id="entryjs-반영하기"><a href="#entryjs-반영하기" class="headerlink" title="entryjs 반영하기"></a>entryjs 반영하기</h3><blockquote>
-<p>entryjs 에서의 개발은 해당 카테고리를 참고해주세요.</p>
+<h3 id="작업용-브랜치-추가하기"><a href="#작업용-브랜치-추가하기" class="headerlink" title="작업용 브랜치 추가하기"></a>작업용 브랜치 추가하기</h3><p>Entry Docs 는 두개의 브랜치를 운영에 사용하고있습니다.  </p>
+<ul>
+<li>master : 개발용 기본 브랜치</li>
+<li>gh-pages : 깃헙페이지로서 보여줄 브랜치</li>
+</ul>
+<p>그러므로 마스터를 기준으로 개발용 브랜치를 추가로 만듭니다.<br>브랜치명에 대한 네이밍 컨벤션은 없습니다. 하지만 브랜치를 보고 목적을 유추할 수 있는 명칭을 추천드립니다.</p>
+<blockquote>
+<p>git checkout master<br>git checkout -b [브랜치명]</p>
 </blockquote>
-<p>배포판의 경우, entryjs 를 그대로 사용하는 것이 아닌 bundle 된 데이터와 offline 에서 필요한 몇가지 파일만을 추출해서 사용합니다.<br>오프라인 프로젝트는 이에 맞춘 구조로 이루어져 있으므로, 동일한 구조로 만들어 주어야 합니다.</p>
-<p>구조는 아래와 같습니다.</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">entryjs&#x2F;</span><br><span class="line"> ...</span><br><span class="line">├─ dist&#x2F;</span><br><span class="line">│  ├─ entry.css</span><br><span class="line">│  ├─ entry.js</span><br><span class="line">│  └─ entry.min.js</span><br><span class="line">├─ extern&#x2F;</span><br><span class="line">├─ images&#x2F;</span><br><span class="line">└─ src&#x2F;</span><br><span class="line">   └─ playground&#x2F;</span><br><span class="line">      ├─ blocks&#x2F;</span><br><span class="line">      ├─ block_entry.js</span><br><span class="line">      └─ block_entry_mini.js</span><br></pre></td></tr></table></figure>
+<h3 id="문서-작업"><a href="#문서-작업" class="headerlink" title="문서 작업"></a>문서 작업</h3><p>문서는 마크다운 문법을 사용하고 있습니다. 그러므로 마크다운을 사용하실 수 있어야 합니다.</p>
+<h4 id="디렉토리-구조"><a href="#디렉토리-구조" class="headerlink" title="디렉토리 구조"></a>디렉토리 구조</h4><p>문서 작업에 필요한 위치는 아래와 같습니다.</p>
+<ul>
+<li>source/guide : 실제 문서가 들어가야할 곳</li>
+<li>source/files : 다운로드 등에 사용될 수 있는 파일</li>
+<li>source/images : 문서에 포함되고자 하는 이미 위치</li>
+</ul>
+<ul>
+<li>source/_posts : 문서는 작성하고자 하나 실제 Entry Docs 에서는 비공개였으면 하는 경우 이곳에 작성</li>
+</ul>
+<h4 id="문서-작성-방법"><a href="#문서-작성-방법" class="headerlink" title="문서 작성 방법"></a>문서 작성 방법</h4><h5 id="문서-파일명"><a href="#문서-파일명" class="headerlink" title="문서 파일명"></a>문서 파일명</h5><p>문서 파일은 YYYY-MM-DD-문서명.md 로 작성해주시면 됩니다.</p>
+<h5 id="문서-메타데이터-작성"><a href="#문서-메타데이터-작성" class="headerlink" title="문서 메타데이터 작성"></a>문서 메타데이터 작성</h5><p>프로젝트는 문서의 메타데이터를 통해 카테고리 및 순서등을 결정합니다.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt; ---</span><br><span class="line">layout: page</span><br><span class="line">title: [문서 제목]</span><br><span class="line">type: guide</span><br><span class="line">category: [카테고리명은 다른 문서와 겹쳐야 합니다. 공백이 있는경우 &#39;&#39; 으로 감싸주세요.]</span><br><span class="line">[order: 1 &#x2F;&#x2F; 순서는 생략가능합니다]</span><br><span class="line">&gt; ---</span><br></pre></td></tr></table></figure>
 
-<p>아래와 같은 구조를 위해 직접 파일을 옮겨도 되나, 기존 배포구조 빌드의 경우 <code>entryjs/script/build.sh</code> 를 따르고 있습니다.<br>bash script 이므로 windows 에서는 git bash 등의 쉘을 사용하셔야 할 수 있습니다.</p>
-<p>이와 같은 파일 구조를 entry-offline/src/renderer/bower_components/entry-js 에 복사하시면 됩니다.</p>
+<h5 id="문서-작성"><a href="#문서-작성" class="headerlink" title="문서 작성"></a>문서 작성</h5><p>문서는 자유롭게 작성하시면 됩니다.<br>이미지 첨부는 <code>[alt 값](/docs/images/...)</code> 와 같은 형태로 작성하시면 됩니다.</p>
+<h4 id="문서-로컬-테스트하기"><a href="#문서-로컬-테스트하기" class="headerlink" title="문서 로컬 테스트하기"></a>문서 로컬 테스트하기</h4><p>Entry Docs 에 반영 요청전 로컬 PC 에서 문서가 어떻게 나올지 테스트하실 수 있습니다.</p>
+<p>먼저 프로젝트의 종속성 라이브러리를 설치한 후, start script 로 실행해보실 수 있습니다.</p>
 <blockquote>
-<p>위의 구조를 어떤 방식으로든 만든다음 entry-offline 내 디렉토리에 위치만 시키면 됩니다.</p>
+<p>npm install<br>npm run start<br>이후 <a href="http://localhost:5000" target="_blank" rel="noopener">http://localhost:5000</a> 에서 docs 를 확인하실 수 있습니다. </p>
 </blockquote>
+<h4 id="PR-요청"><a href="#PR-요청" class="headerlink" title="PR 요청"></a>PR 요청</h4><p>PR 요청 전 작업하신 브랜치를 github 에 올려주세요.</p>
 <blockquote>
-<p>이에 관해서는 편의성을 위해 추후 스크립트 개선 혹은 구조 변경이 있을 수 있습니다.</p>
+<p>git add .<br>git commit -m ‘커밋시 메세지’<br>git push origin -u [브랜치명]</p>
 </blockquote>
-<h3 id="entry-hw-반영하기"><a href="#entry-hw-반영하기" class="headerlink" title="entry-hw 반영하기"></a>entry-hw 반영하기</h3><p>entry-hw 는 특별한 빌드 방법 없이 bower.json 의 주소를 자신의 repository 로 변경 한 후 설치된 파일 그대로 사용합니다.</p>
-<p>특별히 dependency 를 설치해주지 않아도 됩니다.</p>
-<h3 id="실행해보기"><a href="#실행해보기" class="headerlink" title="실행해보기"></a>실행해보기</h3><p>위와 같은 작업이 끝나면, <code>npm run start</code> 로 정상적으로 실행되는지 확인할 수 있습니다.</p>
+<p>이후 PR 을 작성해주시면 됩니다.<br>Github PR 에 관해서는 <a href="/docs/guide/basic/pull_request.html">Basic#PR 요청하기</a> 파트를 참고해주세요.</p>
+<p><a href="https://github.com/entrylabs/docs/pulls" target="_blank" rel="noopener">Entry Docs PR</a> 의 <code>New pull request</code> 버튼을 통해 PR을 생성하실 수 있습니다.</p>
 
     
       <div class="guide-links">
         
-          <span>← <a href="/docs/guide/entry-offline/2017-12-28-translate.html">다국어 작업하기</a></span>
+          <span>← <a href="/docs/guide/etc/2016-05-03-git_fork.html">Git 사용 방법</a></span>
         
         
-          <span style="float:right"><a href="/docs/guide/entry-offline/2018-01-09-build.html">빌드하기</a> →</span>
+          <span style="float:right"><a href="/docs/guide/etc/2019-12-11-updates.html">문서 업데이트 내역</a> →</span>
         
       </div>
     
     <div class="footer">
       Caught a mistake or want to contribute to the documentation?
-      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/entry-offline/2018-10-30-custom_project.md" target="_blank"> -->
-      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/entry-offline/2018-10-30-custom_project.md" target="_blank">
+      <!-- <a href="https://github.com/entrylabs/docs/blob/master/src/guide/etc/2020-06-24-doc_contribution.md" target="_blank"> -->
+      <a href="https://github.com/entrylabs/docs/blob/master/source/guide/etc/2020-06-24-doc_contribution.md" target="_blank">
         Edit this page on Github!
       </a>
       <div id="disqus_thread"></div>
